@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Multi Language App</string>
+    <string name="vietnameselb">Xin Chào</string>
+    <string name="vnEmail">Email</string>
+    <string name="vnPass">Mật Khẩu</string>
+    <string name="vndangnhap">Đăng nhập</string>
+    <string name="vntb">Không có tài khoảng , Vui lòng đăng ký .</string>
+    <string name="enghlishlb">Welcome!</string>
+    <string name="englishEmail">Email Address</string>
+    <string name="englishPass">Password</string>
+    <string name="englishdangnhap">Login</string>
+    <string name="englishtb">Don`t have account ? Sign Up </string>
+    <string name="tvvn">Tiếng Việt</string>
+    <string name="tvenglish">English</string>
+    <string name="tvprance">Prance</string>
+    <string name="prancelb">Accueil</string>
+    <string name="pranceEmail">Adresse e-mail</string>
+    <string name="prancePass">mot de passe</string>
+    <string name="prancedangnhap">Connexion</string>
+    <string name="prancetb">Ne pá avoir un compte? signer</string>
+</resources>

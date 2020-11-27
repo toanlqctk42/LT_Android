@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="10">
+    <Spinner
+        android:layout_weight="1"
+        android:id="@+id/spn1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#73F600"
+        />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/lv1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00A5FF"
+            tools:listitem="@android:layout/list_content" />
+    <GridView
+        android:id="@+id/grv1"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:columnWidth="28dp"
+        />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="TextView"
+        android:gravity="center"
+        android:background="#EEFF09"
+        android:textColor="#FFA000"
+         />
+</androidx.appcompat.widget.LinearLayoutCompat>

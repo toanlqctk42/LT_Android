@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">bt3</string>
+    <string-array name="hedieuhanh">
+        <item>Android</item>
+        <item>IOS</item>
+        <item>WindownPhone</item>
+        <item>bOS</item>
+        <item>Blackberry</item>
+        <item>Symbian</item>
+    </string-array>
+</resources>

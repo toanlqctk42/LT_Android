@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:paddingRight="10dp">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R = "
+                android:textSize="20sp"
+                android:textColor="#FFFF0000"
+                android:layout_weight="2"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/txtgreen"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G = "
+                android:textSize="20sp"
+                android:textColor="#02FF0D"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/txtblue"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B = "
+                android:textSize="20sp"
+                android:textColor="#04A4FB"
+                android:layout_weight="2"
+                android:gravity="center"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <SeekBar
+                android:id="@+id/seekbarred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="8"
+                android:background="@drawable/custom_seekbar"
+                android:max="255"
+                android:progress="0"
+                android:progressBackgroundTint="#FF0000"
+                android:thumb="@android:drawable/star_big_on" />
+
+            <SeekBar
+                android:id="@+id/seekbargreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="8"
+                android:background="@drawable/seekbar_green"
+                android:max="255"
+                android:progress="0"
+                android:progressBackgroundTint="#FF0000"
+                android:thumb="@android:drawable/star_on" />
+
+
+            <SeekBar
+                android:id="@+id/seekbarblue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="8"
+                android:background="@drawable/seekbar_blue"
+                android:max="255"
+                android:progress="0"
+                android:progressBackgroundTint="#FF0000"
+                android:thumb="@android:drawable/star_big_on" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="6">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/lbRGB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:text="RGB"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/tvRGB"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:orientation="vertical">
+           <TextView
+               android:id="@+id/lbCMY"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="CMY"
+               android:textSize="20sp"
+               android:layout_weight="3"
+               android:gravity="center_horizontal"/>
+           <TextView
+               android:id="@+id/tvCMY"
+               android:layout_weight="1"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"/>
+       </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
