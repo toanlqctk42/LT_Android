@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Multi Language App</string>
+    <string name="welcome">Xin chào</string>
+    <string name="email">Email</string>
+    <string name="password">Mật Khẩu</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="do_not_have_account">Không có tài khoảng , vui lòng đăng ký</string>
+</resources>

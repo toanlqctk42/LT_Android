@@ -10,57 +10,62 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvvn, tve, tvpra ,tvlb ,tvtb;
-    EditText edemail , edpass;
-    Button btnok;
+    private TextView lblVietnam;
+    private TextView lblEnglish;
+    private TextView lblFrance;
+
+    private TextView lblWelcome;
+    private EditText txtEmail;
+    private EditText txtPassword;
+    private Button btnLogin;
+    private TextView txtDoNotHaveAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         anhxa();
-        sukien();
     }
     private void anhxa(){
-        tvvn = findViewById(R.id.txtvietnam);
-        tve =  findViewById(R.id.txtenglish);
-        tvpra = findViewById(R.id.txtprace);
-        tvlb = findViewById(R.id.tvlb);
-        tvtb = findViewById(R.id.tvthongbao);
-        edemail = findViewById(R.id.edEmail);
-        edpass = findViewById(R.id.edpass);
-        btnok = findViewById(R.id.btnok);
-    }
-    private void sukien(){
-        tvvn.setOnClickListener(new View.OnClickListener() {
+        lblVietnam = (TextView) findViewById(R.id.txtvietnam);
+        lblEnglish = (TextView) findViewById(R.id.txtenglish);
+        lblFrance = (TextView) findViewById(R.id.txtprace);
+        lblWelcome = (TextView) findViewById(R.id.tvlb);
+        txtEmail = (EditText) findViewById(R.id.edEmail);
+        txtPassword = (EditText) findViewById(R.id.edpass);
+        btnLogin = (Button) findViewById(R.id.btnok);
+        txtDoNotHaveAccount = (TextView) findViewById(R.id.tvthongbao);
+
+        lblVietnam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvlb.setText(R.string.vietnameselb);
-                edemail.setHint(R.string.vnEmail);
-                edpass.setHint(R.string.vnPass);
-                btnok.setText(R.string.vndangnhap);
-                tvtb.setText(R.string.vntb);
+                LocaleHelper.setLocale(MainActivity.this, "vi");
+                setText();
             }
         });
-        tve.setOnClickListener(new View.OnClickListener() {
+
+        lblEnglish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvlb.setText(R.string.enghlishlb);
-                edemail.setHint(R.string.englishEmail);
-                edpass.setHint(R.string.englishPass);
-                btnok.setText(R.string.englishdangnhap);
-                tvtb.setText(R.string.englishtb);
+                LocaleHelper.setLocale(MainActivity.this, "en");
+                setText();
             }
         });
-        tvpra.setOnClickListener(new View.OnClickListener() {
+
+        lblFrance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvlb.setText(R.string.prancelb);
-                edemail.setHint(R.string.pranceEmail);
-                edpass.setHint(R.string.prancePass);
-                btnok.setText(R.string.prancedangnhap);
-                tvtb.setText(R.string.prancetb);
+                LocaleHelper.setLocale(MainActivity.this, "fr");
+                setText();
             }
         });
     }
+    private void setText() {
+        lblWelcome.setText(R.string.welcome);
+        txtEmail.setHint(R.string.email);
+        txtPassword.setHint(R.string.password);
+        btnLogin.setText(R.string.login);
+        txtDoNotHaveAccount.setText(R.string.do_not_have_account);
+    }
+
 }
