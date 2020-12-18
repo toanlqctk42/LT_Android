@@ -7,8 +7,8 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.bt3_lab04"
-        minSdkVersion 16
+        applicationId "com.example.bt05_lab04"
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
