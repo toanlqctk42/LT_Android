@@ -98,8 +98,8 @@ public class AdapterSinhvien extends BaseAdapter {
     }
 
     private void delete(int idSinhvien) {
-        SQLiteDatabase database = Database.initDatabase(context,"quanlysinhvien.db");
-        database.delete("Sinhvien", "ID = ?", new String[]{idSinhvien + ""});
+        SQLiteDatabase database = Database.initDatabase(context,"SinhVien.db");
+        database.delete("DSSinhVien", "ID = ?", new String[]{idSinhvien + ""});
         list.clear();
         Cursor cursor = database.rawQuery("SELECT * FROM Sinhvien", null);
         while (cursor.moveToNext()){

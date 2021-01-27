@@ -11,7 +11,7 @@
     android:orientation="vertical">
 
     <Button
-        android:text="Thêm nhân viên"
+        android:text="Thêm sinh viên"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnAdd" />

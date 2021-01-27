@@ -22,7 +22,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 public class UpdateActivity extends AppCompatActivity {
-    final String DATABASE_NAME = "EmployeeDB.sqlite";
+    final String DATABASE_NAME = "SinhVien.db";
     final int RESQUEST_TAKE_PHOTO = 123;
     final int REQUEST_CHOOSE_PHOTO = 321;
     int id = -1;
@@ -83,7 +83,7 @@ public class UpdateActivity extends AppCompatActivity {
         Intent intent = getIntent();
         id = intent.getIntExtra("ID", -1);
         SQLiteDatabase database = Database.initDatabase(this, DATABASE_NAME);
-        Cursor cursor = database.rawQuery("SELECT * FROM NhanVien WHERE ID = ? ",new String[]{id + ""});
+        Cursor cursor = database.rawQuery("SELECT * FROM DSSinhVien WHERE ID = ? ",new String[]{id + ""});
         cursor.moveToFirst();
         String ten = cursor.getString(1);
         String sdt = cursor.getString(2);
@@ -136,8 +136,8 @@ public class UpdateActivity extends AppCompatActivity {
         contentValues.put("SDT", sdt);
         contentValues.put("Anh", anh);
 
-        SQLiteDatabase database = Database.initDatabase(this, "EmployeeDB.sqlite");
-        database.update("NhanVien", contentValues, "id = ?", new String[] {id + ""});
+        SQLiteDatabase database = Database.initDatabase(this, "SinhVien.db");
+        database.update("SinhVien", contentValues, "id = ?", new String[] {id + ""});
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 

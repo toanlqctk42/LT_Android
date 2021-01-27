@@ -21,7 +21,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 public class AddActivity extends AppCompatActivity {
-    final String DATABASE_NAME = "EmployeeDB.sqlite";
+    final String DATABASE_NAME = "SinhVien.db";
     final int RESQUEST_TAKE_PHOTO = 123;
     final int REQUEST_CHOOSE_PHOTO = 321;
 
@@ -115,8 +115,8 @@ public class AddActivity extends AppCompatActivity {
         contentValues.put("SDT", sdt);
         contentValues.put("Anh", anh);
 
-        SQLiteDatabase database = Database.initDatabase(this, "EmployeeDB.sqlite");
-        database.insert("NhanVien",null, contentValues);
+        SQLiteDatabase database = Database.initDatabase(this, "SinhVien.db");
+        database.insert("DSSinhVien",null, contentValues);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 

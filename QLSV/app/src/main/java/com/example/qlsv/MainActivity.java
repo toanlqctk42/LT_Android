@@ -1,7 +1,5 @@
 package com.example.qlsv;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,11 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String DATABASE_NAME = "quanlysinhvien.db";
+    final String DATABASE_NAME = "SinhVien.db";
     SQLiteDatabase database;
 
     ListView listView;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void readData(){
         database = Database.initDatabase(this, DATABASE_NAME);
-        Cursor cursor = database.rawQuery("SELECT * FROM Sinhvien",null);
+        Cursor cursor = database.rawQuery("SELECT * FROM DSSinhVien",null);
         list.clear();
         for(int i = 0; i < cursor.getCount(); i++){
             cursor.moveToPosition(i);
